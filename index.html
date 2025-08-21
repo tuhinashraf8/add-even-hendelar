@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evend</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="w-11/12 mx-auto mt-3">
+    <div class="bg-amber-100 mx-auto">
+        <h1 class="text-5xl text-center">বাটন ক্লিকের খেলা দেখবো </h1>
+
+
+    </div>
+    <div class="border-2 border-red-600 w-[500px] h-[500px] mx-auto my-10 flex items-center justify-center p-5" id="color-box">
+<p class="text-4xl text-center">নিচের যেই রঙে চাপ দিবেন এই ঘড় ওই রং হয়ে যাবে। </p>
+    </div>
+    <div class="bg-green-300 text-center p-5 rounded-lg my-10">
+        <button class="bg-slate-400 p-1 rounded-md w-20  " onclick="makeYellow ()">হলুদ</button>
+        <button class="bg-slate-400 p-1 rounded-md w-20  " onclick="makered ()">লাল </button>
+        <button class="bg-slate-400 p-1 rounded-md w-20 " id="makeBlue">নিল </button>
+        <button class="bg-slate-400 p-1 rounded-md w-20  " id="makeGold">গোল্ডেন </button>
+    </div>
+
+    <div class="bg-green-200">
+        <h1 class="text-5xl text-center" id="changeTitel">নিচের বাটনে ক্লিক করলে এই লেখাটা পাল্টাবে বাটন ক্লিক করলে </h1>
+    </div>
+    <div class="text-center">
+        <button class="bg-slate-400 p-1 rounded-md m-5 mx-auto" id="changeBtn">change tha h1 text</button>
+    </div>
+    <div>
+        <div class="border-2 border-red-600 w-[500px] h-[150px] mx-auto my-10 flex items-center justify-center" id="color-box">
+            <p class="text-4xl text-center" id="your-name">নিচে আপনার নাম লিখে বাটনে গুতা দিলে এইখানে আপনার নাম আসবে। </p>
+            
+        </div>
+
+    </div>
+    <div class="mx-auto text-center">
+<input class="bg-slate-100 p-5 w-[280px] rounded-2xl" type="name" placeholder="এই খানে আপনার নাম লিখে বাটনে গুতা দিন। " id="submited-your-name">
+ <button class="bg-slate-400 p-1 rounded-md w-20  " id="name-change-btn">গুতা দিন </button>
+    </div>
+
+    
+
+    
+
+
+    <script src="js/events.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>
