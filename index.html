@@ -20,8 +20,9 @@
 
 
     </div>
-    <div class="border-2 border-red-600 w-[500px] h-[500px] mx-auto my-10 flex items-center justify-center p-5" id="color-box">
-<p class="text-4xl text-center">নিচের যেই রঙে চাপ দিবেন এই ঘড় ওই রং হয়ে যাবে। </p>
+    <div class="border-2 border-red-600 w-[500px] h-[500px] mx-auto my-10 flex items-center justify-center p-5"
+        id="color-box">
+        <p class="text-4xl text-center">নিচের যেই রঙে চাপ দিবেন এই ঘড় ওই রং হয়ে যাবে। </p>
     </div>
     <div class="bg-green-300 text-center p-5 rounded-lg my-10">
         <button class="bg-slate-400 p-1 rounded-md w-20  " onclick="makeYellow ()">হলুদ</button>
@@ -29,33 +30,62 @@
         <button class="bg-slate-400 p-1 rounded-md w-20 " id="makeBlue">নিল </button>
         <button class="bg-slate-400 p-1 rounded-md w-20  " id="makeGold">গোল্ডেন </button>
     </div>
+    <div class="my-5 text-center">
+        <p class="text-4xl mb-3">আপনার পছন্দের কালারের নাম লিখে উপরের বক্সের রং পালটাতে পারবেন</p>
+        <input type="text" class="bg-slate-100 w-[500px] h-10 p-5" placeholder="পছন্দের কালারের নাম লিখুন" id="unic-color-name">
+        <button class="bg-slate-400 p-1 rounded-md " id="unic-color">ক্লিক করুন</button>
+    </div>
 
-    <div class="bg-green-200">
-        <h1 class="text-5xl text-center" id="changeTitel">নিচের বাটনে ক্লিক করলে এই লেখাটা পাল্টাবে বাটন ক্লিক করলে </h1>
+    <div class="bg-green-200 rounded-xl p-5">
+        <h1 class="text-5xl text-center" id="changeTitel">নিচের বাটনে ক্লিক করলে এই লেখাটা পাল্টাবে ।
+        </h1>
     </div>
     <div class="text-center">
-        <button class="bg-slate-400 p-1 rounded-md m-5 mx-auto" id="changeBtn">change tha h1 text</button>
+        <button class="bg-slate-400 p-1 rounded-md m-5 mx-auto" id="changeBtn">লেখা পালটাতে এখানে গুতা দিন</button>
     </div>
     <div>
-        <div class="border-2 border-red-600 w-[500px] h-[150px] mx-auto my-10 flex items-center justify-center" id="color-box">
-            <p class="text-4xl text-center" id="your-name">নিচে আপনার নাম লিখে বাটনে গুতা দিলে এইখানে আপনার নাম আসবে। </p>
-            
+        <div class="border-2 border-red-600 w-[500px] h-[150px] mx-auto my-10 flex items-center justify-center"
+            id="color-box">
+            <p class="text-4xl text-center" id="your-name"> আপনার নাম লিখে বাটনে গুতা দিলে এইখানে আপনার নাম আসবে।
+            </p>
+
         </div>
 
     </div>
     <div class="mx-auto text-center">
-<input class="bg-slate-100 p-5 w-[280px] rounded-2xl" type="name" placeholder="এই খানে আপনার নাম লিখে বাটনে গুতা দিন। " id="submited-your-name">
- <button class="bg-slate-400 p-1 rounded-md w-20  " id="name-change-btn">গুতা দিন </button>
+        <input class="bg-slate-100 p-5 w-[280px] rounded-2xl" type="name"
+            placeholder="এই খানে আপনার নাম লিখে বাটনে গুতা দিন। " id="submited-your-name">
+        <button class="bg-slate-400 p-1 rounded-md w-20  " id="name-change-btn">গুতা দিন </button>
     </div>
 
-    
+    <div class="bg-green-200 rounded-xl p-5">
+        <h1 class="text-5xl text-center" id="changeTitel">নিচের মন্তব্যের ঘড়ে আপনার মন্তব্য লিখুন </h1>
+    </div>
+    <div class="my-5 text-center  bg-cyan-200 rounded-xl">
+        <h1 class="text-4xl">এখানে আপনার মন্তব্যগুলো দেখা যাবে। </h1>
+<div class=" rounded-xl p-5 flex gap-5 flex-wrap my-5 " id="comnet-contenar">
 
+    </div>
+    </div>
     
-
+    <div class="flex gap-5 justify-center items-center my-5">
+        <textarea class="border-2 w-[500px] h-[300px] text-center" name="text" id="coment-text"
+            placeholder="আপনার মন্তব্য এইখানে লিখুন"></textarea>
+        <button class="bg-slate-400 p-1 rounded-md w-20  " id="coment-btn">ক্লিক করুন</button>
+    </div>
 
     <script src="js/events.js"></script>
     <script>
-
+        document.getElementById('comnet-contenar')
+        .addEventListener('click', function(event){
+            if(event.target === document.getElementById('comnet-contenar')){
+                return;
+            }
+            event.stopPropagation()
+            console.log(event.target);
+            event.target.parentNode.removeChild(event.target)
+            
+        })
     </script>
 </body>
 
